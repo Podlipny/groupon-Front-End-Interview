@@ -30,15 +30,18 @@
     "declarationMap": true,
     "sourceMap": true,
     "incremental": true,
+    "paths": {
+      "@components": ["components"],
+      "@components/*": ["components/*"],
+      "@lib": ["lib"],
+      "@lib/*": ["lib/*"],
+      "@enums": ["enums/*"],
+    },
   },
   "include": [
     "./src",
     "**/*.ts",
     "**/*.tsx"
   ],
-  "paths": {
-    "components": ["/components/*"],
-    "enums": ["/enums/*"],
-  },
   "references": [{ "path": "./tsconfig.node.json" }]
 }

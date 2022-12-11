@@ -1,6 +1,19 @@
 # Groupon Front-End Interview Assignment
 
-TBD
+Tech 
+
+**CORS Proxy setup**
+Proxy is possible to change in poackage.json "proxy": "https://aukro.cz" or in vite.js config file:
+`vite.config.ts`
+```
+  proxy: {
+    '/api': {
+      target: 'https://aukro.cz',
+      changeOrigin: true,
+      rewrite: (path) => path.replace(/^\/api/, ''),
+    },
+  },
+```
 
 ## How to run
  - `yarn dev` - for development
@@ -21,4 +34,4 @@ to run image with mounted local volume for Hot Module Reload
 
 **For production preview**
 to build image: `docker build -t [name of image] -f dockerfile.preview .`
-to run image `docker run -it --rm -p 8080:8080 --name [name of the container] [name of the image]`
+to run image `docker run -it --rm -p 4200:4200 --name [name of the container] [name of the image]`
