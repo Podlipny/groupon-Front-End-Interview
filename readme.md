@@ -1,9 +1,14 @@
 # Groupon Front-End Interview Assignment
 
-Tech 
+**Used tech stack:**
+ - Vite.js bundler as for application scaffolding, I used a custom webpack config, but Vite.js is easier to use and, thanks to ESBuild also quicker to build. Also, it supports Babel and RollUp plugins.
+ - Tailwind - I used to use Styled-Components (XStyles, StyledSystems, Twin.Makro for Tailwind intergration), but currently I am shifting towards plane old CSS/SCSS with Tailwind and CSS modules.
+ - State management - I've used React-Query and plane useState, which is fine for API+ state handling. React-Query allows caching and optinistic updates. But for bigger projects my 1# to go is Redux (Redux Toolkit).
+ - ESLint - I am using my preferd set of rules for clean and performant code `https://github.com/Podlipny/eslint-tslint-rules`
+ `https://www.npmjs.com/package/@podlipny/eslint-config`
 
 **CORS Proxy setup**
-Proxy is possible to change in poackage.json "proxy": "https://aukro.cz" or in vite.js config file:
+Proxy is possible to change in poackage.json `"proxy": "https://aukro.cz"` or in vite.js config file:
 `vite.config.ts`
 ```
   proxy: {
@@ -18,7 +23,7 @@ Proxy is possible to change in poackage.json "proxy": "https://aukro.cz" or in v
 ## How to run
  - `yarn dev` - for development
  - `yarn build` - production build
- - `yarn preview` - production version of application
+ - `yarn preview` - preview production version of application
 
  - `yarn lint` - run ESLint kode check
  - `yarn lint:fix` - run ESLint kode check with autofix
